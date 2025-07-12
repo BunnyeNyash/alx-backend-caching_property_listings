@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Listings</title>
+</head>
+<body>
+    <h1>Properties</h1>
+    <ul>
+        {% for property in properties %}
+            <li>{{ property.title }} - {{ property.price }} - {{ property.location }}</li>
+        {% empty %}
+            <li>No properties found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
